@@ -1,12 +1,14 @@
-// Layout.
-$content-width: 1200px;
-$page-header-height: 70px;
+// Fonts Variables
+$sans-serif: 'Work Sans', Helvetica, sans-serif;
+$header: 'Poppins', Georgia, serif;
 
-// Text colors.
-$color-text: #000;
+$primary-font: $sans-serif;
+$secondary-font: $header;
 
-$color-link: #000;
-$color-link-hover: #000;
+// Colors
+$navy: #3634a3;
+$light-grey: #404040;
+$blue: #3586ff;
 
-// Breakpoints.
-$breakpoint-mobile-navigation: 860px;
+$color-text: $light-grey;
+$color-link: $blue;

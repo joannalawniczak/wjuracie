@@ -1,11 +1,12 @@
-// Vendors.
-@import '../../../node_modules/normalize-scss/sass/normalize/import-now';
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Work+Sans:400,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Poppins:400,500,700&subset=latin-ext);
 
 // Generic assets.
 @import './app/variables';
+@import './app/reset';
 @import './app/typography';
 @import './app/layout';
 
 // Theme assets.
 @import './app/page-header';
-@import './app/page-nav';

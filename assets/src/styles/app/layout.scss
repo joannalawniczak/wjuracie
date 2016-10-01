@@ -1,5 +1,18 @@
 .inner {
-	max-width: $content-width;
-	padding: 0 20px;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0 30px;
 	margin: 0 auto;
+}
+
+@media all and(max-width: 1370px) {
+	.inner {
+		padding: 0 40px;
+	}
+}
+
+@media all and(max-width: 568px) {
+	.inner {
+		padding: 0 20px;
+	}
 }

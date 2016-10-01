@@ -4,22 +4,227 @@
 	top: 0;
 	z-index: 10;
 	width: 100%;
-	box-shadow: 0 1px 10px rgba( 0, 0, 0, .15 );
+	background: #ffffff;
+	box-shadow: 0 2px 3px rgba( 0, 0, 0, .2 );
 
 	.inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		min-height: $page-header-height;
+		min-height: 66px;
 	}
 
-	.page-logo {
-		margin: 0;
-		font-size: 24px;
+	a {
+		display: block;
+
+		img {
+			display: block;
+		}
+	}
+
+	// General desktop menu styles.
+	.page-nav {
+		ul {
+			transform: translate(0, 0);
+
+			li {
+				display: inline-block;
+				padding-left: 30px;
+				line-height: 2.4em;
+
+				a {
+					position: relative;
+					text-decoration: none;
+					color: $navy;
+					font-size: 12px;
+					text-transform: uppercase;
+					letter-spacing: 1.4px;
+					font-family: $secondary-font;
+					font-weight: 500;
+					padding: 10px;
+
+					&:hover {
+						&:before {
+							opacity: 1;
+							transition: opacity .8s;
+						}
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						right: 10px;
+						bottom: 12px;
+						left: 10px;
+						height: 1px;
+						background: $navy;
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Pure CSS hamburger icon with nice animation (hidden at default).
+	.page-nav-toggle {
+		display: none;
+		width: 30px;
+		height: 3px;
+		padding: 8px 0;
+		margin-left: 30px;
+		box-sizing: content-box;
+
+		span {
+			&,
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: inherit;
+				height: inherit;
+				background: $navy;
+				cursor: pointer;
+				transition:
+					transform .2s linear,
+					background .01s linear .2s,
+					top .25s linear .4s,
+					bottom .25s linear .4s;
+			}
+
+			&:before {
+				top: -8px;
+			}
+
+			&:after {
+				bottom: -8px;
+			}
+		}
 	}
 }
 
 // Push page content below sticky header.
 body {
-	padding-top: $page-header-height;
+	padding-top: 66px;
+}
+
+// Mobile breakpoint.
+@media all and (max-width: 910px) {
+	// Apply opacity transition to page content
+	// when navigation is opening.
+	main {
+		transition: opacity .5s;
+	}
+
+	.page-header {
+		// General mobile navigation styles.
+		.page-nav {
+			ul {
+				position: absolute;
+				z-index: -1;
+				top: -400px;
+				left: 0;
+				right: 0;
+				background: #ffffff;
+				padding-top: 60px;
+				transition: transform .5s cubic-bezier(.87, -.41, .19, 1.44);
+				box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+
+				li {
+					display: block;
+					padding-left: 0;
+
+					a {
+						text-align: left;
+						// @TODO: padding-left should be taken from inner.
+						padding: 17px 40px 15px;
+						border-top: solid 1px #cecee4;
+
+						&:hover {
+							background: #f6f6f6;
+
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Show hamburger icon.
+		.page-nav-toggle {
+			display: block;
+		}
+
+		// Styles for header and navigation when mobile navigation is opened.
+		&.page-nav-active {
+			// Reduce page content opacity to expose navigation.
+			& + main {
+				opacity: .5;
+			}
+
+			// Slide down navigation.
+			.page-nav {
+				ul {
+					transform: translate(0, 410px);
+				}
+
+				// Transform hamburger icon into close `X` icon.
+				.page-nav-toggle span {
+					background: transparent;
+
+					&,
+					&:before,
+					&:after {
+						transition: top .25s linear,
+						bottom .25s linear,
+						background .01s linear .25s,
+						transform .2s linear .4s;
+					}
+
+					&:before {
+						top: 0;
+						transform: rotate(-45deg);
+					}
+
+					&:after {
+						bottom: 0;
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media all and(max-width: 568px) {
+	.page-header {
+		.inner {
+			min-height: 56px;
+		}
+
+		a {
+			img {
+				width: 170px;
+			}
+		}
+
+		.page-nav ul {
+			top: -415px;
+
+			li {
+				line-height: 1.8em;
+
+				a  {
+					// @TODO: padding-left should be taken from inner.
+					padding: 14px 20px 13px;
+				}
+			}
+		}
+	}
+
+	body {
+		padding-top: 56px;
+	}
 }

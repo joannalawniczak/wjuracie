@@ -1,15 +1,12 @@
 // General text styles.
 body {
+	font-family: $primary-font;
 	color: $color-text;
+	font-size: 14px;
 }
 
 // Link styles.
 a {
 	text-decoration: none;
 	color: $color-link;
-
-	&:hover {
-		text-decoration: underline;
-		color: $color-link-hover;
-	}
 }
