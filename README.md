@@ -1,13 +1,12 @@
-# Static layout starter
+# Static layout of summer house website.
 
-[![devDependency Status](https://david-dm.org/joannalawniczak/static-layout-starter/dev-status.svg)](https://david-dm.org/joannalawniczak/static-layout-starter?type=dev)
+[![devDependency Status](https://david-dm.org/joannalawniczak/wjuracie/dev-status.svg)](https://david-dm.org/joannalawniczak/wjuracie?type=dev)
 
-## Tech stack
-- Sass with Autoprefixer
-- esnext JS by Rollup + Babel
-- JS unit tests by karma
-- JS code sniffing by ESLint
-- production and development build
+## Preview:
+[http://joannalawniczak.github.io/wjuracie/]([http://joannalawniczak.github.io/wjuracie/])
+
+## Tested on:
+- Chrome 51
 
 ## Tasks
 - `gulp build` / `npm run build` - production build
