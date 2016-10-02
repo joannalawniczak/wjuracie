@@ -1,12 +1,12 @@
 {
-  "name": "static-layout-starter",
+  "name": "wjuracie",
   "version": "0.0.1",
-  "description": "Scaffolding for static layout.",
+  "description": "Static layout of summer house website.",
   "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:joannalawniczak/static-layout-starter.git"
+    "url": "git@github.com:joannalawniczak/wjuracie.git"
   },
   "scripts": {
     "build": "./node_modules/.bin/gulp build",
@@ -17,7 +17,7 @@
   "keywords": [
     "static",
     "layout",
-    "starter"
+    "wjuracie"
   ],
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
