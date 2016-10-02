@@ -1,0 +1,161 @@
+.offer-intro {
+	background: 50% 50% no-repeat;
+	background-image: url(../images/bg-offer-intro.svg);
+	background-size: cover;
+	padding: 150px 0 120px;
+
+	.content {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		div {
+			width: 53%;
+			margin-left: 16%;
+
+			p {
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+	footer {
+		text-align: center;
+		padding-top: 80px;
+
+		@media all and(max-width: 1024px) {
+			padding-top: 60px;
+		}
+
+		@media all and(max-width: 736px) {
+			padding-top: 40px;
+		}
+	}
+}
+
+.offer-details  {
+	width: 100%;
+	padding-bottom: 150px;
+	background: 50% 50% no-repeat;
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.content {
+			width: 62%;
+		}
+
+		img {
+			position: relative;
+			z-index: -20;
+			width: 450px;
+		}
+	}
+
+	&-equipment {
+		background-image: url(../images/bg-offer-details.svg);
+
+		img {
+			right: -6%;
+		}
+	}
+
+	&-rooms {
+		background-image: url(../images/bg-offer-room.svg);
+
+		img {
+			left: -6%;
+		}
+	}
+}
+
+@media all and(max-width: 1420px) {
+	.offer-details {
+		&-equipment {
+			.content {
+				padding-right: 30px;
+			}
+
+			img {
+				right: 0;
+			}
+		}
+
+		&-rooms {
+			.content {
+				padding-left: 30px;
+			}
+
+			img {
+				left: 0;
+			}
+		}
+	}
+}
+
+@media all and(max-width: 1024px) {
+	.offer-intro {
+		background-image: url(../images/bg-offer-intro-1024.svg);
+		padding: 130px 0 100px;
+	}
+
+	.offer-details {
+		padding-bottom: 80px;
+
+		.inner {
+			.content {
+				width: 100%;
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		&-equipment {
+			background-image: url(../images/bg-offer-details-1024.svg);
+
+			.content {
+				padding-right: 0;
+			}
+		}
+
+		&-rooms {
+			background-image: url(../images/bg-offer-room-1024.svg);
+
+			.content {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@media all and(max-width: 736px) {
+	.offer-intro {
+		background-image: url(../images/bg-offer-intro-736.svg);
+		padding: 80px 0;
+
+		.content {
+			display: inline-block;
+
+			div {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+
+	.offer-details {
+		background: none;
+		padding-bottom: 60px;
+	}
+}
+
+@media all and(max-width: 568px) {
+	.offer-intro {
+		background: none;
+	}
+}

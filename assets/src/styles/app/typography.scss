@@ -5,8 +5,65 @@ body {
 	font-size: 14px;
 }
 
+// Headers styles.
+h2, h3 {
+	font-family: $secondary-font;
+	font-weight: 700;
+	color: $color-header;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 74px;
+	padding-bottom: 50px;
+}
+
+h3 {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
 // Link styles.
 a {
 	text-decoration: none;
 	color: $color-link;
+}
+
+
+// Text styles.
+p {
+	line-height: 2.4;
+}
+
+
+// Media queries
+@media all and(max-width: 1370px) {
+	h2 {
+		font-size: 48px;
+		line-height: 60px;
+	}
+}
+
+@media all and(max-width: 736px) {
+	h2 {
+		font-size: 40px;
+		line-height: 46px;
+		padding-bottom: 30px;
+	}
+
+	p {
+		line-height: 1.9;
+	}
+}
+
+@media all and(max-width: 568px) {
+	h2 {
+		font-size: 30px;
+		line-height: 38px;
+		padding-bottom: 22px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
 }
