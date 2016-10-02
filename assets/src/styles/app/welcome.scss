@@ -1,0 +1,53 @@
+.welcome {
+	background: $navy 50% 50% no-repeat;
+	background-image: url(../images/bg-welcome.svg), url(../images/hero-wjuracie.jpg);
+	background-size: cover;
+
+	p {
+		padding: 250px 0;
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	@media all and(max-width: 1024px) {
+		background-image: url(../images/bg-welcome-1024.svg), url(../images/hero-wjuracie-1024.jpg);
+
+		p {
+			padding: 210px 0 220px;
+		}
+	}
+
+	@media all and(max-width: 736px) {
+		background-image: url(../images/bg-welcome-1024.svg) 50% 50% no-repeat, url(../images/hero-wjuracie-736.jpg) 50% 50% no-repeat;
+
+		p {
+			padding: 120px 0;
+
+			img {
+				width: 300px;
+			}
+		}
+	}
+
+	@media all and(max-width: 568px) {
+		background-image: url(../images/hero-wjuracie-736.jpg);
+
+		p {
+			padding: 60px 0;
+		}
+	}
+
+	@media all and(max-width: 414px) {
+		p {
+			padding: 80px 0;
+
+			img {
+				width: 220px;
+			}
+		}
+	}
+}
