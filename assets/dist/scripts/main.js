@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e){e.querySelector(".page-nav-toggle").addEventListener("click",function(){return e.classList.toggle("page-nav-active")}),[].forEach.call(e.querySelectorAll("a:not(.page-nav-toggle)"),function(t){t.addEventListener("click",function(){return e.classList.remove("page-nav-active")})})}e(document.querySelector(".page-header"))}();
