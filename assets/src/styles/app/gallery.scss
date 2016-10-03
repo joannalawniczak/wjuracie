@@ -1,0 +1,210 @@
+.gallery {
+	text-align: center;
+	position: relative;
+	padding: 120px 0 170px;
+
+	h2 {
+		padding-bottom: 30px;
+	}
+
+	&:after {
+		content: '';
+		z-index: 5;
+		background: url(../images/bg-gallery.svg) 50% 50% no-repeat;
+		pointer-events: none;
+		@include stretch();
+	}
+
+	.thumbs {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5%;
+		margin: 30px 0;
+
+		a {
+			display: block;
+			background-color: #ffffff;
+
+			&:hover {
+				img {
+					opacity: .8;
+				}
+			}
+
+			img {
+				display: block;
+				opacity: 1;
+				transition: opacity .2s ease;
+				backface-visibility: hidden;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.bedroom,
+		.front {
+			position: absolute;
+		}
+
+		.bedroom {
+			top: 30px;
+			left: 33%;
+			z-index: 2;
+		}
+
+		.front {
+			bottom: -50px;
+			left: 45%;
+			z-index: 4;
+		}
+
+		.patio,
+		.lawn {
+			position: relative;
+		}
+
+		.patio {
+			z-index: 1;
+		}
+
+		.lawn {
+			z-index: 3;
+		}
+	}
+
+	@media all and(max-width: 1370px) {
+		padding: 100px 0 120px;
+	}
+
+	@media all and(max-width: 1024px) {
+		&:after {
+			background: url(../images/bg-gallery-1024.svg) 50% 50% no-repeat;
+		}
+
+		.thumbs {
+			.bedroom {
+				top: 30px;
+				left: 25%;
+				z-index: 2;
+			}
+
+			.front {
+				bottom: -50px;
+				left: 35%;
+				z-index: 4;
+			}
+		}
+	}
+
+	@media all and(max-width: 900px) {
+		&:after {
+			background: none;
+		}
+
+		.thumbs {
+			.patio {
+				width: 330px;
+			}
+
+			.bedroom {
+				width: 299px;
+				left: 33%;
+			}
+
+			.lawn {
+				width: 220px;
+			}
+
+			.front {
+				width: 300px;
+				left: 40%;
+			}
+		}
+	}
+
+	@media all and(max-width: 736px) {
+		.thumbs {
+			padding: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	@media all and(max-width: 660px) {
+		.thumbs {
+			.patio {
+				width: 250px;
+			}
+
+			.bedroom {
+				width: 230px;
+				top: 20px;
+				left: 37%;
+			}
+
+			.lawn {
+				width: 160px;
+			}
+
+			.front {
+				width: 220px;
+				left: 42%;
+			}
+		}
+	}
+
+	@media all and(max-width: 568px) {
+		padding: 70px 0 100px;
+
+		h2 {
+			padding-bottom: 10px;
+		}
+	}
+
+	@media all and(max-width: 450px) {
+		.thumbs {
+			.patio {
+				width: 190px;
+			}
+
+			.bedroom {
+				width: 170px;
+				left: 32%;
+				top: 18px;
+			}
+
+			.lawn {
+				width: 120px;
+			}
+
+			.front {
+				width: 170px;
+				left: 38%;
+				bottom: -30px;
+			}
+		}
+	}
+
+	@media all and(max-width: 355px) {
+		.thumbs {
+			.patio {
+				width: 140px;
+			}
+
+			.bedroom {
+				width: 150px;
+				left: 26%;
+				top: 10px;
+			}
+
+			.lawn {
+				width: 100px;
+			}
+
+			.front {
+				width: 150px;
+			}
+		}
+	}
+}
