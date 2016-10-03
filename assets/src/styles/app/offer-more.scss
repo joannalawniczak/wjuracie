@@ -1,0 +1,55 @@
+.offer-more {
+	text-align: center;
+	color: #ffffff;
+	background: $navy 50% 50% no-repeat;
+	background-image: url(../images/bg-offer-more.svg);
+	background-size: cover;
+	padding: 240px 0;
+
+	h2 {
+		color: #ffffff;
+	}
+
+	p:last-child {
+		padding-top: 15px;
+		color: #76e1a6;
+
+		a {
+			position: relative;
+			color: #76e1a6;
+			padding: 10px 0;
+
+			&:after {
+				content: '';
+				position: absolute;
+				height: 1px;
+				right: 0;
+				bottom: 2px;
+				left: 0;
+				background: #76e1a6;
+				opacity: .6;
+			}
+
+			&:hover:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	@media all and(max-width: 1024px) {
+		background-image: url(../images/bg-offer-more-1024.svg);
+		background-size: cover;
+		padding: 200px 0;
+	}
+
+	@media all and(max-width: 736px) {
+		background-image: url(../images/bg-offer-more-736.svg);
+		background-size: cover;
+		padding: 100px 0;
+	}
+
+	@media all and(max-width: 568px) {
+		background: $navy;
+		padding: 70px 0;
+	}
+}
