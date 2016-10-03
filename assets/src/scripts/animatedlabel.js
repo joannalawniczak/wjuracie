@@ -1,4 +1,10 @@
-export default function forms ( elements ) {
+/**
+ * Adds class `focused` to form field parent when form field is focused.
+ * Toggles class `not-empty` on form field parent.
+ *
+ * @param {NodeList} elements Input elements.
+ */
+export default function animatedLabel ( elements ) {
 	[].forEach.call( elements, ( form ) => {
 		form.addEventListener( 'focus', ( evt ) => evt.target.parentNode.classList.add( 'focused' ) );
 

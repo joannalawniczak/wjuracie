@@ -1,5 +1,5 @@
 import mobileNavigation from './mobile-navigation.js';
-import forms from './forms.js';
+import animatedLabel from './animatedlabel.js';
 
 mobileNavigation( document.querySelector( '.page-header' ) );
-forms( document.querySelector( 'form' ) );
+animatedLabel( document.querySelectorAll( 'form .control' ) );
