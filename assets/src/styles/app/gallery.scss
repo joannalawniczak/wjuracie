@@ -80,7 +80,7 @@
 
 	@media all and(max-width: 1024px) {
 		&:after {
-			background: url(../images/bg-gallery-1024.svg) 50% 50% no-repeat;
+			background-image: url(../images/bg-gallery-1024.svg);
 		}
 
 		.thumbs {
@@ -109,6 +109,7 @@
 			}
 
 			.bedroom {
+				// Strange value is because of the problem with 1px white line under this image.
 				width: 299px;
 				left: 33%;
 			}
