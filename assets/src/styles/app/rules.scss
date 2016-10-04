@@ -1,0 +1,36 @@
+.rules {
+    padding: 40px 0;
+    text-align: center;
+    background: url(../images/bg-rules.svg) 50% 50% no-repeat;
+    background-size: cover;
+
+    .inner {
+        max-width: 890px;
+
+        h2 {
+            padding-bottom: 20px;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        text-align: left;
+        padding-left: 15px;
+
+        li {
+            list-style: decimal;
+            line-height: 26px;
+            padding-top: 15px;
+        }
+    }
+
+    @media all and(max-width: 568px) {
+        background: none;
+
+        .inner {
+            h2 {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
