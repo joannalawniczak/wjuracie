@@ -2,7 +2,7 @@
 	background: 50% 50% no-repeat;
 	background-image: url(../images/bg-offer-intro.svg);
 	background-size: cover;
-	padding: 150px 0 120px;
+	padding: 150px 0 40px;
 
 	.content {
 		position: relative;
@@ -36,7 +36,6 @@
 
 .offer-details  {
 	width: 100%;
-	padding-bottom: 150px;
 	background: 50% 50% no-repeat;
 
 	.inner {
@@ -57,6 +56,7 @@
 
 	&-equipment {
 		background-image: url(../images/bg-offer-details.svg);
+		padding: 80px 0 100px;
 
 		img {
 			right: -6%;
@@ -65,6 +65,7 @@
 
 	&-rooms {
 		background-image: url(../images/bg-offer-room.svg);
+		padding-bottom: 150px;
 
 		img {
 			left: -6%;
@@ -99,7 +100,7 @@
 @media all and(max-width: 1024px) {
 	.offer-intro {
 		background-image: url(../images/bg-offer-intro-1024.svg);
-		padding: 130px 0 100px;
+		padding: 130px 0 40px;
 	}
 
 	.offer-details {
@@ -136,7 +137,7 @@
 @media all and(max-width: 736px) {
 	.offer-intro {
 		background-image: url(../images/bg-offer-intro-736.svg);
-		padding: 80px 0;
+		padding: 80px 0 10px;
 
 		.content {
 			display: inline-block;

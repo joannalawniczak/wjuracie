@@ -13,7 +13,7 @@
 	<header class="page-header">
 		<div class="inner">
 			<h1 class="page-logo">
-				<a href="#welcome" title="Domek w Juracie">
+				<a href="#welcome" title="Domek w Juracie" data-scroll>
 					<img src="assets/dist/images/logo-wjuracie-small.svg" alt="Domek w Juracie">
 				</a>
 			</h1>
@@ -97,8 +97,69 @@
 				</div>
 			</section>
 		</div>
+
+		<section class="offer-more">
+			<div class="inner">
+				<h2 class="section-header">Zapraszamy</h2>
+				<p>Domek przeznaczony dla maksymalnie 5 osób.</p>
+				<p>Ceny wynajmu od 200 do 450 zł/dobę za cały obiekt.</p>
+				<p>Zapraszamy od maja do września.</p>
+				<p>Rezerwacja jest równoznaczna z akceptacją <a href="rules.html" title="Zapoznaj się z Regulaminem">Regulaminu</a>.</p>
+			</div>
+		</section>
+
+		<section class="gallery" id="gallery">
+			<div class="inner">
+				<h2 class="section-header">Galeria</h2>
+				<ul class="thumbs">
+					<li><a href="#" class="patio" title="Zobacz więcej zdjęć"><img src="assets/dist/images/gallery-patio.jpg"></a></li>
+					<li><a href="#" class="bedroom" title="Zobacz więcej zdjęć"><img src="assets/dist/images/gallery-bedroom.jpg"></a></li>
+					<li><a href="#" class="front" title="Zobacz więcej zdjęć"><img src="assets/dist/images/gallery-front.jpg"></a></li>
+					<li><a href="#" class="lawn" title="Zobacz więcej zdjęć"><img src="assets/dist/images/gallery-lawn.jpg"></a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div id="map" class="map"></div>
+
+			<div class="inner">
+				<div class="contact-data">
+					<h2 class="section-header">Kontakt</h2>
+
+					<h3 class="fn">Krystyna Wróbel</h3>
+					<p>
+						<a class="tel" href="tel:0048513959213">+48 513 959 213</a><br>
+						<a class="email" href="mailto:domek@wjuracie.pl">domek@wjuracie.pl</a><br>
+						nr konta: 09 1140 2004 0000 3902 6649 3292
+					</p>
+
+					<form>
+						<fieldset>
+							<label for="name">imię i nazwisko</label>
+							<input class="control" type="text" name="name" id="name" required>
+						</fieldset>
+						<fieldset>
+							<label for="email">email</label>
+							<input class="control" type="email" id="email" name="email" required>
+						</fieldset>
+						<fieldset>
+							<label for="message">wiadomość</label>
+							<textarea class="control" id="message" name="message" rows="1" cols="30" required></textarea>
+						</fieldset>
+						<button type="submit" class="btn">Wyślij</button>
+					</form>
+
+					<footer>
+						Domek w Juracie &copy; 2016 Design & code
+						<a href="https://dribbble.com/lawniczak" target="_blank" title="Portfolio">Joanna Ławniczak</a>.
+					</footer>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<script src="assets/dist/scripts/main.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAZLuYbR0z-Naz58zjT92kt59sCj3F5F8w&callback=mapInit"></script>
 </body>
 </html>

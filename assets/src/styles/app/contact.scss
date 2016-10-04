@@ -1,0 +1,169 @@
+.contact {
+	position: relative;
+	background: url(../images/bg-contact.svg) 100% 100% no-repeat;
+	padding: 100px 0 30px;
+
+	@media all and(max-width: 1024px) {
+		padding-top: 80px;
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 50%;
+		background: #2d2d2d;
+	}
+
+	.contact-data {
+		margin-left: 57%;
+
+		p {
+			margin-bottom: 30px;
+		}
+
+		form {
+			height: 380px;
+
+			fieldset {
+				position: relative;
+				border: 0;
+				padding-bottom: 15px;
+				padding-top: 20px;
+				min-height: 47px;
+
+				&:not(.focused):not(.not-empty) {
+					label {
+						pointer-events: none;
+					}
+				}
+
+				label {
+					position: absolute;
+					display: block;
+					color: $light-grey;
+					top: 21px;
+					transition: .2s;
+					transition-property: top, font-size, color;
+				}
+
+				.control {
+					width: 100%;
+					height: 26px;
+					padding: 0 0 6px;
+					border: solid #cccccc;
+					border-width: 0 0 1px;
+					outline: 0;
+					background: transparent;
+				}
+
+				textarea {
+					transition: height .5s;
+				}
+
+				&.focused,
+				&.not-empty {
+					label {
+						top: 0;
+						font-size: 13px;
+					}
+
+					.control {
+						outline: 0;
+					}
+
+					textarea {
+						height: 90px;
+					}
+				}
+
+				&.focused {
+					label {
+						color: $color-link;
+					}
+
+					.control {
+						border-color: $color-link;
+						border-bottom-width: 2px;
+					}
+				}
+			}
+
+			.error {
+				color: #ff7777;
+
+				span {
+					position: absolute;
+					right: 0;
+					bottom: -2px;
+				}
+
+				.control {
+					border-bottom: solid 2px #ff7777;
+				}
+			}
+
+			.btn {
+				margin-top: 9px;
+			}
+		}
+
+		footer {
+			font-size: 12px;
+		}
+	}
+
+	@media all and(max-width: 1200px) {
+		display: flex;
+		position: static;
+		flex-direction: column-reverse;
+		padding-bottom: 0;
+		background: url(../images/bg-contact-1200.svg) 100% 10% no-repeat;
+
+		.map {
+			position: static;
+			width: 100%;
+			height: 400px;
+		}
+
+		.inner {
+			.contact-data {
+				margin: 0 auto;
+				width: 60%;
+				text-align: center;
+				padding-bottom: 40px;
+			}
+		}
+	}
+
+	@media all and(max-width: 736px) {
+		background: none;
+
+		.map {
+			display: none;
+		}
+	}
+
+	@media all and(max-width: 568px) {
+		.inner {
+			.contact-data {
+				width: 80%;
+			}
+		}
+	}
+
+	@media all and(max-width: 414px) {
+		.inner {
+			.contact-data {
+				width: 100%;
+			}
+		}
+	}
+}

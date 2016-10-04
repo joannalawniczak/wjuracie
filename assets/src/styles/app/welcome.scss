@@ -22,7 +22,7 @@
 	}
 
 	@media all and(max-width: 736px) {
-		background-image: url(../images/bg-welcome-1024.svg) 50% 50% no-repeat, url(../images/hero-wjuracie-736.jpg) 50% 50% no-repeat;
+		background-image: url(../images/bg-welcome-1024.svg), url(../images/hero-wjuracie-736.jpg);
 
 		p {
 			padding: 120px 0;
