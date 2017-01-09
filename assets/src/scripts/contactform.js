@@ -1,4 +1,4 @@
-import FormValidator from '../../../node_modules/form-validator/dist/form-validator.es6.js';
+import FormValidator from 'form-validator/src/form-validator.js';
 
 /**
  * Validates contact form.
