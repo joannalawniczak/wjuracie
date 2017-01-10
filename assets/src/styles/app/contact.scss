@@ -122,7 +122,7 @@
 
 	@media all and(max-width: 1200px) {
 		display: flex;
-		position: static;
+		position: relative;
 		flex-direction: column-reverse;
 		padding-bottom: 0;
 		background: url(../images/bg-contact-1200.svg) 100% 10% no-repeat;
