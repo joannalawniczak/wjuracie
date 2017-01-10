@@ -42,6 +42,7 @@
 					font-family: $secondary-font;
 					font-weight: 500;
 					padding: 10px;
+					transform: translateZ(0);
 
 					&:hover {
 						&:before {
